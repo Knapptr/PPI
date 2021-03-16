@@ -33,11 +33,11 @@ else:
     os.chdir(root_path_abs)
     logging.info(f'about to init venv. CWD is {os.getcwd()}')
     try:
-        os.system("python -m venv ./venv")
+        os.system("python3 -m venv ./venv")
 
         # write bash script to source in venv
         with open('bash_source.sh',"w") as f:
-            f.write(f"#!/bin/bash\ncd {root_path_abs}\nsource ./venv/bin/activate\npip install python-dotenv")
+            f.write(f"#!/bin/bash\ncd {root_path_abs}\nsource ./venv/bin/activate\npip3 install python-dotenv")
         logging.info("Just finished writing bash script, running now....")
 
         # run bash script 
